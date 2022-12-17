@@ -18,12 +18,26 @@ fun main() {
     println("Saldo: ${contaFran.saldo}")
     println()
     println("Depositando na conta do Alex")
-    deposita(contaAlex, 50.00)
-    println("Saldo atual ${contaAlex.saldo}")
+    contaAlex.deposita(50.00)
+    println("Saldo depois de depositar: ${contaAlex.saldo}")
+    contaAlex.saca(150.00)
+    println("Saldo depois de sacar: ${contaAlex.saldo}")
 
     println("Depositando na conta do Fran")
-    deposita(contaFran, 458.00)
-    println("Saldo atual: ${contaFran.saldo}")
+    contaFran.deposita(458.00)
+    println("Saldo depois de depositar: ${contaFran.saldo}")
+    contaFran.saca(875.00)
+    println("Saldo depois de sacar: ${contaFran.saldo}")
+
+    println("Transferencia da conta da Fran para a do Alex")
+
+    if (contaFran.transferencia(21.00, contaAlex)) {
+        println("Sucesso na transferencia")
+    } else {
+        println("Falha na transferencia saldo insuficiente")
+    }
+    println("Saldo atual Fran: ${contaFran.saldo}")
+    println("Saldo atual Alex: ${contaAlex.saldo}")
 }
 
 
@@ -31,10 +45,27 @@ class Conta {
     var titular = ""
     var numero = 0
     var saldo = 0.0
-}
+    fun deposita(valor: Double) {
+        this.saldo += valor  //this.saldo do proprio objeto
+    }
 
-fun deposita(conta: Conta, valor: Double) {
-    conta.saldo += valor
+    fun saca(valor: Double) {
+        if (this.saldo >= valor) {
+            this.saldo -= valor
+        }
+    }
+
+    fun transferencia(valor: Double, destino: Conta): Boolean {
+        if (saldo >= valor) {
+            saldo -= valor
+            destino.saldo += valor
+            return true
+        } else {
+            return false
+        }
+
+    }
+
 
 }
 
