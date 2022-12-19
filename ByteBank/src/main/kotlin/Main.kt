@@ -1,6 +1,6 @@
 fun main() {
     println("Bem vindo ao Bytebank")
-    var contaAlex = Conta("leandro", 100)
+    var contaAlex = Conta("Leandro", 100)
     contaAlex.deposita(1254.00)
     //Conta().titular = "Leandro"  // cria a conta como se fosse Conta conta = new conta();
     println("Titular: ${contaAlex.titular}")
@@ -14,17 +14,18 @@ fun main() {
     println("Saldo: ${contaFran.saldo}")
     println()
     println("Depositando na conta do Alex")
+
     contaAlex.deposita(50.00)
     println("Saldo depois de depositar: ${contaAlex.saldo}")
     contaAlex.saca(150.00)
     println("Saldo depois de sacar: ${contaAlex.saldo}")
-
+    println()
     println("Depositando na conta do Fran")
     contaFran.deposita(458.00)
     println("Saldo depois de depositar: ${contaFran.saldo}")
     contaFran.saca(875.00)
     println("Saldo depois de sacar: ${contaFran.saldo}")
-
+    println()
     println("Transferencia da conta da Fran para a do Alex")
 
     if (contaFran.transferencia(21.00, contaAlex)) {
@@ -32,12 +33,17 @@ fun main() {
     } else {
         println("Falha na transferencia saldo insuficiente")
     }
+
+    println()
+
     println("Saldo atual Fran: ${contaFran.saldo}")
     println("Saldo atual Alex: ${contaAlex.saldo}")
+
+
 }
 
 
-class Conta(var titular: String, var numero: Int) {
+class Conta(val titular: String, val numero: Int) {
     //var titular = titular
     //var numero = numero //posso colocar a variavel diretamente no constructor.
     var saldo = 0.0
@@ -86,8 +92,7 @@ fun testaCopiasEReferencias() {
 
     val contaJoao = Conta("João", 558)
 
-    var contaMaria = contaJoao
-    contaMaria.titular = "Maria"
+    var contaMaria = Conta("Maria",432)
     println("titular conta joão: ${contaJoao.titular}")
     println("titular conta Maria: ${contaMaria.titular}")
 
