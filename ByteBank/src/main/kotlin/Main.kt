@@ -1,18 +1,14 @@
 fun main() {
     println("Bem vindo ao Bytebank")
-    var contaAlex = Conta()
-    contaAlex.titular = "leandro"
-    contaAlex.numero = 100
+    var contaAlex = Conta("leandro", 100)
     contaAlex.deposita(1254.00)
     //Conta().titular = "Leandro"  // cria a conta como se fosse Conta conta = new conta();
     println("Titular: ${contaAlex.titular}")
     println("Conta: ${contaAlex.numero}")
     println("Saldo: ${contaAlex.saldo}")
     println()
-    var contaFran = Conta()
-    contaFran.titular = "Fran"
-    contaFran.numero = 101
-    contaFran.deposita (458.00)
+    var contaFran = Conta("Fran", 101)
+    contaFran.deposita(458.00)
     println("Titular: ${contaFran.titular}")
     println("Conta: ${contaFran.numero}")
     println("Saldo: ${contaFran.saldo}")
@@ -41,15 +37,20 @@ fun main() {
 }
 
 
-class Conta {
-    var titular = ""
-    var numero = 0
+class Conta(var titular: String, var numero: Int) {
+    //var titular = titular
+    //var numero = numero //posso colocar a variavel diretamente no constructor.
     var saldo = 0.0
+        private set
+    //constructor(titular: String, numero: Int){  //o construtor pode ser usado diretamente na classe sem dar problemas.
+    //   this.titular = titular
+    //    this.numero = numero
 
-      private set
+    // }
+
 
     fun deposita(valor: Double) {
-        if(valor > 0.0) {
+        if (valor > 0.0) {
             this.saldo += valor  //this.saldo do proprio objeto
 
         }
@@ -83,8 +84,7 @@ fun testaCopiasEReferencias() {
     var numeroY = numeroX
     numeroY++
 
-    val contaJoao = Conta()
-    contaJoao.titular = "João"
+    val contaJoao = Conta("João", 558)
 
     var contaMaria = contaJoao
     contaMaria.titular = "Maria"
