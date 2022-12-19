@@ -4,9 +4,9 @@ fun testaCopiasEReferencias() {
     var numeroY = numeroX
     numeroY++
 
-    val contaJoao = Conta("João", 558)
+    val contaJoao = ContaCorrente("João", 558)
 
-    var contaMaria = Conta("Maria",432)
+    var contaMaria = ContaPoupanca("Maria",432)
     println("titular conta joão: ${contaJoao.titular}")
     println("titular conta Maria: ${contaMaria.titular}")
 

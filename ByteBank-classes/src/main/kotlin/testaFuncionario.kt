@@ -1,8 +1,6 @@
 fun testaFuncionarios(){
-    println("Bem vindo ao ByteBank")
 
-
-    val alex = Funcionario(
+    val alex = Analista(
         "leandro", "222.555.444.77", 1300.00
     )
 

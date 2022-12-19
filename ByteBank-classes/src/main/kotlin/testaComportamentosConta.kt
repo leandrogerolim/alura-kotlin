@@ -1,14 +1,14 @@
 fun testaComportamentosConta() {
 
 
-    var contaAlex = Conta("Leandro", 100)
+    var contaAlex = ContaCorrente("Leandro", 100)
     contaAlex.deposita(1254.00)
 //Conta().titular = "Leandro"  // cria a conta como se fosse Conta conta = new conta();
     println("Titular: ${contaAlex.titular}")
     println("Conta: ${contaAlex.numero}")
     println("Saldo: ${contaAlex.saldo}")
     println()
-    var contaFran = Conta("Fran", 101)
+    var contaFran = ContaPoupanca("Fran", 101)
     contaFran.deposita(458.00)
     println("Titular: ${contaFran.titular}")
     println("Conta: ${contaFran.numero}")
