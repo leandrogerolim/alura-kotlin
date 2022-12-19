@@ -16,6 +16,15 @@ fun testaAutenticacao() {
 
     testaComportamentosConta()
     val sistema = SistemaInterno()
+
+
+    val cliente = Cliente(
+        "leandro","444.333.222-66",1000
+
+    )
+
     sistema.entra(gerente, 1000)
     sistema.entra(diretora, 2000)
+    sistema.entra(cliente, 1000)
 }
+

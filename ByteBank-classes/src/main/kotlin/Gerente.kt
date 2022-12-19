@@ -10,6 +10,8 @@ class Gerente(
     senha = senha
 ) {
 
+
+
     override val bonificacao: Double
         get() = salario * 0.2
 
