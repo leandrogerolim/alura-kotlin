@@ -3,7 +3,7 @@ fun main() {
     var contaAlex = Conta()
     contaAlex.titular = "leandro"
     contaAlex.numero = 100
-    contaAlex.setSaldo( 1254.00)
+    contaAlex.deposita(1254.00)
     //Conta().titular = "Leandro"  // cria a conta como se fosse Conta conta = new conta();
     println("Titular: ${contaAlex.titular}")
     println("Conta: ${contaAlex.numero}")
@@ -12,7 +12,7 @@ fun main() {
     var contaFran = Conta()
     contaFran.titular = "Fran"
     contaFran.numero = 101
-    contaFran.saldo = 458.00
+    contaFran.deposita (458.00)
     println("Titular: ${contaFran.titular}")
     println("Conta: ${contaFran.numero}")
     println("Saldo: ${contaFran.saldo}")
@@ -44,10 +44,16 @@ fun main() {
 class Conta {
     var titular = ""
     var numero = 0
-    private var saldo = 0.0
+    var saldo = 0.0
+
+      private set
 
     fun deposita(valor: Double) {
-        this.saldo += valor  //this.saldo do proprio objeto
+        if(valor > 0.0) {
+            this.saldo += valor  //this.saldo do proprio objeto
+
+        }
+
     }
 
     fun saca(valor: Double) {
@@ -66,12 +72,6 @@ class Conta {
         }
 
 
-    }
-    fun getSaldo(): Double{
-        return saldo
-    }
-    fun setSaldo(valor: Double){
-        saldo = valor
     }
 
 
