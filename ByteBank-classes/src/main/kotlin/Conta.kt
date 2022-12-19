@@ -1,4 +1,4 @@
-class Conta(val titular: String, val numero: Int) {
+open class Conta(val titular: String, val numero: Int) {
     //var titular = titular
     //var numero = numero //posso colocar a variavel diretamente no constructor.
     var saldo = 0.0
@@ -18,7 +18,7 @@ class Conta(val titular: String, val numero: Int) {
 
     }
 
-    fun saca(valor: Double) {
+    open fun saca(valor: Double) {
         if (this.saldo >= valor) {
             this.saldo -= valor
         }
