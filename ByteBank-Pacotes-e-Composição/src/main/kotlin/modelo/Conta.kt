@@ -1,3 +1,5 @@
+package modelo
+
 abstract class Conta(val titular: String, val numero: Int) {
     //var titular = titular
     //var numero = numero //posso colocar a variavel diretamente no constructor.

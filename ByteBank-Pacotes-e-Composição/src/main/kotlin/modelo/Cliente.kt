@@ -1,4 +1,12 @@
-class Cliente (val nome: String, val cpf: String, protected val senha: Int): Autenticavel {
+package modelo
+
+import modelo.Autenticavel
+
+class Cliente(
+    val nome: String,
+    val cpf: String,
+    protected val senha: Int
+): Autenticavel {
 
 
     override fun autentica(senha: Int): Boolean {

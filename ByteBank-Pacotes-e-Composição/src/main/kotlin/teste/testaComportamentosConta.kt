@@ -1,17 +1,20 @@
+import modelo.ContaCorrente
+import modelo.ContaPoupanca
+
 fun testaComportamentosConta() {
 
 
     var contaAlex = ContaCorrente("Leandro", 100)
     contaAlex.deposita(1254.00)
-//Conta().titular = "Leandro"  // cria a conta como se fosse Conta conta = new conta();
+//modelo.Conta().titular = "Leandro"  // cria a conta como se fosse modelo.Conta conta = new conta();
     println("Titular: ${contaAlex.titular}")
-    println("Conta: ${contaAlex.numero}")
+    println("modelo.Conta: ${contaAlex.numero}")
     println("Saldo: ${contaAlex.saldo}")
     println()
     var contaFran = ContaPoupanca("Fran", 101)
     contaFran.deposita(458.00)
     println("Titular: ${contaFran.titular}")
-    println("Conta: ${contaFran.numero}")
+    println("modelo.Conta: ${contaFran.numero}")
     println("Saldo: ${contaFran.saldo}")
     println()
     println("Depositando na conta do Alex")
