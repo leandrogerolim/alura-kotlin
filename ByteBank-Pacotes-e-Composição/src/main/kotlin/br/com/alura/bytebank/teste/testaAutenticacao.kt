@@ -24,7 +24,7 @@ fun testaAutenticacao() {
 
 
     val cliente = Cliente(
-        "leandro","444.333.222-66",1000
+        "leandro","444.333.222-66", senha = 1000
 
     )
 
