@@ -1,5 +1,9 @@
 package br.com.alura.bytebank.modelo
 
+
+
+
+
 abstract class Conta(
     val titular: Cliente,
     val numero: Int
@@ -11,8 +15,17 @@ abstract class Conta(
     //constructor(titular: String, numero: Int){  //o construtor pode ser usado diretamente na classe sem dar problemas.
     //   this.titular = titular
     //    this.numero = numero
+    companion object{
+        var total = 0
+        private set
+    }
+    init{
+        println("Criando conta")
+        total++
+    }
 
-    // }
+
+
     fun deposita(valor: Double) {
         if (valor > 0.0) {
             this.saldo += valor  //this.saldo do proprio objeto
