@@ -16,7 +16,8 @@ val contaPoupanca = ContaPoupanca (
 
 contaCorrente.deposita(1000.0)
 contaPoupanca.deposita(1000.0)
-
+    println("nome do titular ${contaCorrente.titular.nome}")
+    println("cpf do titular ${contaCorrente.titular.cpf}")
 println("Saldo modelo.Conta Corrente: ${contaCorrente.saldo}")
 println("Saldo modelo.Conta Poupança: ${contaPoupanca.saldo}")
 
