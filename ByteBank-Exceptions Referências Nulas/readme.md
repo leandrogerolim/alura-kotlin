@@ -1,13 +1,20 @@
-## - Kotlin: herança, polimorfismo e Interface:
+## - Kotlin: lidando com exceptions e referências nulas:
 
-testaContasDiferentes() :
+#### Aprenda o que é a pilha de execução
 
-![image](https://user-images.githubusercontent.com/92825608/208536087-16f2fd93-00a6-4f0c-9c11-d35b463dd8e9.png)
+#### Entenda o que são exceptions e seus impactos na pilha de execução
 
-testaAutenticacao():
+#### Trate exceptions com try expression
 
-![image](https://user-images.githubusercontent.com/92825608/208536576-31b75c22-dfae-466d-8f78-8c91a6dabe1f.png)
+#### Conheça as possibilidades de expressões do Kotlin
 
-testaFuncionarios():
+#### Crie e lance exceptions
 
-![image](https://user-images.githubusercontent.com/92825608/208536795-e5d34a0f-376b-46b3-aa7b-4666f8ab9cd4.png)
+#### Saiba o que o é o Null Safety e os recursos disponíveis
+
+#### Lide com referências nulas e mantenha o código seguro
+
+
+testaAny() :
+
+![image](https://user-images.githubusercontent.com/92825608/209356505-2ec1c2b1-cefe-489d-be44-ed1356dccec4.png)
