@@ -1,4 +1,17 @@
-## - Kotlin: herança, polimorfismo e Interface:
+## - Kotlin: recursos da linguagem com pacotes e composição
+
+
+### Crie e organize o projeto com pacotes
+
+### Entenda e utilize a composição entre as classes
+
+### Implemente variáveis globais e entenda seus problemas
+
+### Conheça o object expressions e declarations
+
+### Saiba o que é a classe Any
+
+### Reutilize e sobrescreva os métodos de Any
 
 testaContasDiferentes() :
 
@@ -8,6 +21,4 @@ testaAutenticacao():
 
 ![image](https://user-images.githubusercontent.com/92825608/208536576-31b75c22-dfae-466d-8f78-8c91a6dabe1f.png)
 
-testaFuncionarios():
 
-![image](https://user-images.githubusercontent.com/92825608/208536795-e5d34a0f-376b-46b3-aa7b-4666f8ab9cd4.png)
